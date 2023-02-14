@@ -1,16 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MapChart
+    style="“height: 100%; width: 100%"
+    title="新北市"
+    :stats="{ data: [] }"
+  />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MapChart from "./components/MapChart.vue"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
+    MapChart,
+  },
 }
 </script>
 
