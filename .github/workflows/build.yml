@@ -1,5 +1,7 @@
 name: Node.js CI
 
+run-name: echarts demo ${{ github.ref_name }}
+
 on: 
   push:
     tags:
