@@ -35,6 +35,7 @@ jobs:
 
     - name: Archive files
       run: |
+        sudo apt-get install zip
         zip -r archive.zip src/accests/*
 
     - name: upload test
