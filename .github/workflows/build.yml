@@ -31,3 +31,12 @@ jobs:
         name: artifact_${{ github.ref_name }}
         path: |
           dist
+
+    - name: upload test
+      uses: adityak74/google-drive-upload-git-action@main
+      with:
+        credentials: ${{ secrets.DRIVE_CREDENTIALS }}
+        filename: dist/favicon.ico
+        folderId: ${{ secrets.folderId }}
+        overwrite: "true"
+        mirrorDirectoryStructure: "true"
