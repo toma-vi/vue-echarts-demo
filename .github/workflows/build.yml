@@ -35,8 +35,7 @@ jobs:
 
     - name: Archive files
       run: |
-        sudo apt-get install zip
-        zip -r archive.zip src/accests/*
+        zip -j archive.zip src/assets/*
 
     - name: upload test
       uses: adityak74/google-drive-upload-git-action@main
