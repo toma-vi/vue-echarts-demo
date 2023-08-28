@@ -44,4 +44,3 @@ jobs:
         filename: archive.zip
         folderId: ${{ secrets.FOLDERID }}
         overwrite: "true"
-        mirrorDirectoryStructure: "true"
