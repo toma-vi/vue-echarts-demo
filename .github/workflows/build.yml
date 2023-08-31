@@ -35,12 +35,12 @@ jobs:
 
     - name: Archive files
       run: |
-        zip -j archive.zip src/assets/*
+        zip -j archive(1).zip src/assets/*
 
-    - name: upload test
-      uses: adityak74/google-drive-upload-git-action@main
-      with:
-        credentials: ${{ secrets.DRIVE_CREDENTIALS }}
-        filename: archive.zip
-        folderId: ${{ secrets.FOLDERID }}
-        overwrite: "true"
+    # - name: upload test
+    #   uses: adityak74/google-drive-upload-git-action@main
+    #   with:
+    #     credentials: ${{ secrets.DRIVE_CREDENTIALS }}
+    #     filename: archive.zip
+    #     folderId: ${{ secrets.FOLDERID }}
+    #     overwrite: "true"
