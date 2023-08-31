@@ -35,7 +35,7 @@ jobs:
 
     - name: Archive files
       run: |
-        zip -j archive(1).zip src/assets/*
+        zip -j "archive(${{ github.ref_name }}).zip" src/assets/*
 
     # - name: upload test
     #   uses: adityak74/google-drive-upload-git-action@main
