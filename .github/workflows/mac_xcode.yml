@@ -1,0 +1,23 @@
+name: mac test
+
+on: 
+  push:
+    tags:
+      - test[0-9]+
+
+permissions: read-all
+
+jobs:
+  build:
+    name: test
+    runs-on: macos-latest
+    steps:
+      - name: List Xcode installations
+        run: ls /Applications | grep "Xcode"
+
+      # - name: Set up flutter
+      #   uses: subosito/flutter-action@v2
+      #   with:
+      #     channel: stable
+      #     flutter-version: '3.13.x'
+      # - run: flutter doctor -v
