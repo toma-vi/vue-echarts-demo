@@ -10,7 +10,7 @@ permissions: read-all
 jobs:
   build:
     name: test
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
       - name: List Xcode installations
         run: ls /Applications | grep "Xcode"
